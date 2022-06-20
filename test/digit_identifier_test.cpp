@@ -2,7 +2,8 @@
 
 #include "identifier.h"
 
-TEST(IdentifierTest, DigitIdentifier) {
+TEST(identifiers, digit_identifier)
+{
     Identifier identifier{"A1"};
 
     EXPECT_EQ("A1", identifier.get_value());

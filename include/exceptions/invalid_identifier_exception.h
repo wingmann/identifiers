@@ -5,7 +5,9 @@
 
 class InvalidIdentifierException : public IdentifierException {
 public:
-    explicit InvalidIdentifierException(const char* message) : IdentifierException{message} {}
+    explicit InvalidIdentifierException(const char* message) : IdentifierException{message}
+    {
+    }
 };
 
 #endif // WINGMANN_IDENTIFIERS_EXCEPTIONS_INVALID_IDENTIFIER_EXCEPTION_H

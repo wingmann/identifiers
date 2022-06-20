@@ -3,10 +3,12 @@
 #include "identifier.h"
 #include "invalid_identifier_exception.h"
 
-TEST(IdentifierTest, InvalidLetterIdentifier) {
+TEST(identifiers, invalid_letter_identifier)
+{
     try {
         Identifier identifier{"V1"};
-    } catch (InvalidIdentifierException&) {
+    }
+    catch (InvalidIdentifierException&) {
         EXPECT_TRUE(true);
     }
 }
