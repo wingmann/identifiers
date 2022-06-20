@@ -3,8 +3,7 @@
 #include "end_of_sequence_exception.h"
 #include "identifier.h"
 
-TEST(IdentifierTest, MaxIdentifierGroupCount)
-{
+TEST(IdentifierTest, MaxIdentifierGroupCount) {
     try {
         Identifier identifier{"Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z8"};
         identifier.increase();
@@ -12,8 +11,7 @@ TEST(IdentifierTest, MaxIdentifierGroupCount)
         EXPECT_EQ(identifier.get_value(), "Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9-Z9");
 
         identifier.increase();
-    }
-    catch(EndOfSequenceException& e) {
+    } catch (EndOfSequenceException& e) {
         EXPECT_TRUE(true);
     }
 }

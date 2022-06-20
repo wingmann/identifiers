@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.21)
+cmake_minimum_required(VERSION 2.20)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

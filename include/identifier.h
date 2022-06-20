@@ -1,11 +1,11 @@
-#ifndef IDENTIFIER_H
-#define IDENTIFIER_H
+#ifndef WINGMANN_IDENTIFIERS_IDENTIFIER_H
+#define WINGMANN_IDENTIFIERS_IDENTIFIER_H
 
 #include "identifier_group.h"
 
+#include <cstddef>
 #include <list>
 #include <string>
-#include <cstddef>
 
 /**
  * Contains the list of group.
@@ -38,4 +38,4 @@ private:
     void add_new_group();
 };
 
-#endif // IDENTIFIER_H
+#endif // WINGMANN_IDENTIFIERS_IDENTIFIER_H

@@ -1,13 +1,11 @@
-#ifndef IDENTIFIER_EXCEPTION_H
-#define IDENTIFIER_EXCEPTION_H
+#ifndef WINGMANN_IDENTIFIERS_EXCEPTIONS_IDENTIFIER_EXCEPTION_H
+#define WINGMANN_IDENTIFIERS_EXCEPTIONS_IDENTIFIER_EXCEPTION_H
 
 #include <stdexcept>
 
 class IdentifierException : public std::runtime_error {
 public:
-    IdentifierException(const char* message) :std::runtime_error(message)
-    {
-    }
+    explicit IdentifierException(const char* message) : std::runtime_error{message} {}
 };
 
-#endif // IDENTIFIER_EXCEPTION_H
+#endif // WINGMANN_IDENTIFIERS_EXCEPTIONS_IDENTIFIER_EXCEPTION_H

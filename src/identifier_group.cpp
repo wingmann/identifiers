@@ -4,8 +4,7 @@
 #include <sstream>
 #include <utility>
 
-IdentifierGroup::IdentifierGroup(std::string value, bool check_string) : value_{std::move(value)}
-{
+IdentifierGroup::IdentifierGroup(std::string value, bool check_string) : value_{std::move(value)} {
     if (check_string) {
         check_length();
         check_letter();
@@ -13,13 +12,11 @@ IdentifierGroup::IdentifierGroup(std::string value, bool check_string) : value_{
     }
 }
 
-void IdentifierGroup::increase()
-{
+void IdentifierGroup::increase() {
     if (increase_number()) increase_letter();
 }
 
-void IdentifierGroup::check_length()
-{
+void IdentifierGroup::check_length() {
     auto is_valid = value_.length() == 2;
 
     if (!is_valid) {
@@ -30,8 +27,7 @@ void IdentifierGroup::check_length()
     }
 }
 
-void IdentifierGroup::check_letter()
-{
+void IdentifierGroup::check_letter() {
     auto is_valid = is_letter_valid(value_[0]);
 
     if (!is_valid) {
@@ -42,8 +38,7 @@ void IdentifierGroup::check_letter()
     }
 }
 
-void IdentifierGroup::check_digit()
-{
+void IdentifierGroup::check_digit() {
     auto is_valid = is_digit_valid(value_[1]);
 
     if (!is_valid) {
@@ -54,20 +49,16 @@ void IdentifierGroup::check_digit()
     }
 }
 
-bool IdentifierGroup::is_letter_valid(char letter)
-{
+bool IdentifierGroup::is_letter_valid(char letter) {
     return ('A' <= letter) && ('Z' >= letter) && ('D' != letter) && ('F' != letter) &&
-           ('G' != letter) && ('J' != letter) && ('M' != letter) && ('Q' != letter) &&
-           ('V' != letter);
+        ('G' != letter) && ('J' != letter) && ('M' != letter) && ('Q' != letter) && ('V' != letter);
 }
 
-bool IdentifierGroup::is_digit_valid(char digit)
-{
+bool IdentifierGroup::is_digit_valid(char digit) {
     return ('1' <= digit) && ('9' >= digit);
 }
 
-void IdentifierGroup::increase_letter()
-{
+void IdentifierGroup::increase_letter() {
     char& letter = value_[0];
     ++letter;
 
@@ -78,15 +69,13 @@ void IdentifierGroup::increase_letter()
     }
 }
 
-bool IdentifierGroup::increase_number()
-{
+bool IdentifierGroup::increase_number() {
     char& number = value_[1];
     ++number;
 
     bool result = '9' < number;
 
-    if (result)
-        number = '1';
+    if (result) number = '1';
 
     return result;
 }

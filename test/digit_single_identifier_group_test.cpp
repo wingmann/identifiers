@@ -3,8 +3,7 @@
 #include "identifier.h"
 #include "invalid_identifier_exception.h"
 
-TEST(IdentifierTest, DigitSingleIdentifierGroup)
-{
+TEST(IdentifierTest, DigitSingleIdentifierGroup) {
     IdentifierGroup identifierGroup{"A1"};
 
     EXPECT_EQ("A1", identifierGroup.get_value());

@@ -5,8 +5,7 @@
 #include "identifier.h"
 #include "invalid_identifier_exception.h"
 
-TEST(IdentifierTest, LetterIdentifier)
-{
+TEST(IdentifierTest, LetterIdentifier) {
     const BaseTestInstance base_test_instance{};
 
     for (char i = 'A'; i <= 'Z'; ++i) {
@@ -21,8 +20,7 @@ TEST(IdentifierTest, LetterIdentifier)
 
             EXPECT_FALSE(base_test_instance.is_unavailable_char(i));
             EXPECT_EQ('1', value[1]);
-        }
-        catch(InvalidIdentifierException&) {
+        } catch (InvalidIdentifierException&) {
             EXPECT_TRUE(base_test_instance.is_unavailable_char(i));
         }
     }

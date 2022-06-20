@@ -1,5 +1,5 @@
-#ifndef IDENTIFIER_GROUP_H
-#define IDENTIFIER_GROUP_H
+#ifndef WINGMANN_IDENTIFIERS_IDENTIFIER_GROUP_H
+#define WINGMANN_IDENTIFIERS_IDENTIFIER_GROUP_H
 
 #include <string>
 
@@ -29,13 +29,17 @@ public:
      * Returns a string with the beginning of the sequence.
      * @return Beginning of the sequence.
      */
-    constexpr static auto get_standard_start() { return "A1"; }
+    constexpr static auto get_standard_start() {
+        return "A1";
+    }
 
     /**
      * Returns current value of identifier sequence.
      * @return Current identifier.
      */
-    [[nodiscard]] const std::string& get_value() const { return value_; }
+    [[nodiscard]] const std::string& get_value() const {
+        return value_;
+    }
 
 private:
     void check_length();
@@ -52,4 +56,4 @@ private:
     bool increase_number();
 };
 
-#endif // IDENTIFIER_GROUP_H
+#endif // WINGMANN_IDENTIFIERS_IDENTIFIER_GROUP_H

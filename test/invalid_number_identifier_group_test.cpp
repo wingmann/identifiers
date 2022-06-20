@@ -3,12 +3,10 @@
 #include "identifier_group.h"
 #include "invalid_identifier_exception.h"
 
-TEST(IdentifierTest, InvalidNumberIdentifierGroup)
-{
+TEST(IdentifierTest, InvalidNumberIdentifierGroup) {
     try {
         IdentifierGroup identifierGroup{"B0"};
-    }
-    catch(InvalidIdentifierException&) {
+    } catch (InvalidIdentifierException&) {
         EXPECT_TRUE(true);
     }
 }

@@ -8,8 +8,7 @@ private:
     std::set<char> unavailable_characters_;
 
 public:
-    BaseTestInstance()
-    {
+    BaseTestInstance() {
         unavailable_characters_.insert('D');
         unavailable_characters_.insert('F');
         unavailable_characters_.insert('G');
@@ -20,8 +19,7 @@ public:
     }
 
 public:
-    [[nodiscard]] bool is_unavailable_char(char value) const
-    {
+    [[nodiscard]] bool is_unavailable_char(char value) const {
         return unavailable_characters_.end() != unavailable_characters_.find(value);
     }
 };

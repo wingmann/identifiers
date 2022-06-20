@@ -1,13 +1,11 @@
-#ifndef INVALID_IDENTIFIER_EXCEPTION_H
-#define INVALID_IDENTIFIER_EXCEPTION_H
+#ifndef WINGMANN_IDENTIFIERS_EXCEPTIONS_INVALID_IDENTIFIER_EXCEPTION_H
+#define WINGMANN_IDENTIFIERS_EXCEPTIONS_INVALID_IDENTIFIER_EXCEPTION_H
 
 #include "identifier_exception.h"
 
 class InvalidIdentifierException : public IdentifierException {
 public:
-    InvalidIdentifierException(const char* message) : IdentifierException(message)
-    {
-    }
+    explicit InvalidIdentifierException(const char* message) : IdentifierException{message} {}
 };
 
-#endif // INVALID_IDENTIFIER_EXCEPTION_H
+#endif // WINGMANN_IDENTIFIERS_EXCEPTIONS_INVALID_IDENTIFIER_EXCEPTION_H
